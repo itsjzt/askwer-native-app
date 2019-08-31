@@ -18,7 +18,11 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.itsjzt.askwerNative"
+    },
+    "android": {
+      "package": "com.itsjzt.askwerNative"
     }
   }
 }
