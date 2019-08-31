@@ -1,32 +1,11 @@
 import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import Header from "./components/Header";
-import PostCard from "./components/PostCard";
-import { postMock, userMock } from "./utils/mock";
-import constants from "./utils/constants";
-import PostCardList from "./components/PostCardList";
+import QuestionSingle from "./pages/QuestionSingle";
 
-export default function App() {
-  const s = styles;
+export interface AppProps {}
 
-  return (
-    <View style={s.app}>
-      <Header user={userMock} />
-      <View style={s.container}>
-        <PostCardList />
-      </View>
-    </View>
-  );
-}
+// todo: add react native navigation
+const App: React.SFC<AppProps> = () => {
+  return <QuestionSingle />;
+};
 
-const styles = StyleSheet.create({
-  app: {
-    flex: 1,
-    display: "flex",
-  },
-  container: {
-    flex: 1,
-    padding: constants.md,
-    backgroundColor: constants.white,
-  },
-});
+export default App;

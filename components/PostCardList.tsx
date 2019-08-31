@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import { postMock } from "../utils/mock";
-import PostCard from "./PostCard";
+import PostCard from "./QuestionCard";
 import constants from "../utils/constants";
 
 export interface PostCardListProps {}
