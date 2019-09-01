@@ -1,14 +1,8 @@
 import { createStackNavigator } from "react-navigation-stack";
 import Feeds from "../pages/Feeds";
-export default createStackNavigator(
-  {
-    Feeds: Feeds,
-  },
-  {
-    defaultNavigationOptions: {
-      headerStyle: {
-        display: "none",
-      },
-    },
-  }
-);
+import QuestionSingle from "../pages/QuestionSingle";
+
+export default createStackNavigator({
+  QuestionSingle: QuestionSingle,
+  Feeds: Feeds,
+});
