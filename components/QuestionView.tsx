@@ -1,14 +1,9 @@
 import * as React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  Image,
-  Button,
-  TouchableOpacity,
-} from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import constants from "../utils/constants";
 import { formatDistanceToNow } from "date-fns";
+import QuestionMinimal from "./QuestionMinimal";
+import Tags, { TagsProps, Tag } from "./Tags";
 
 export interface QuestionViewProps {
   heading: string;
@@ -17,7 +12,7 @@ export interface QuestionViewProps {
     username: string;
   };
   createdAt: Date;
-  tags: Array<string>;
+  tags: Array<Tag>;
 }
 
 const QuestionView: React.SFC<QuestionViewProps> = props => {
@@ -26,17 +21,13 @@ const QuestionView: React.SFC<QuestionViewProps> = props => {
   return (
     <View style={styles.question}>
       <View style={styles.wrapper}>
-        <View style={styles.tags}>
-          {tags.map((tag, index) => (
-            <Text style={styles.tagName} key={index}>{`#${tag}`}</Text>
-          ))}
-        </View>
-        <Text style={styles.heading}>{heading}</Text>
+        <Tags tags={tags} />
+        <QuestionMinimal text={heading} />
         <View style={styles.info}>
           <Text style={styles.usersName}>{author.name}</Text>
           <Text style={styles.mutedText}> added </Text>
           <Text style={styles.postedTime}>
-            {formatDistanceToNow(createdAt)}
+            {formatDistanceToNow(createdAt)} ago
           </Text>
         </View>
         <View style={styles.actions}>
@@ -83,17 +74,6 @@ const styles = StyleSheet.create({
   postedTime: {
     fontSize: constants.fontSmall,
     fontWeight: "600",
-  },
-  tags: {
-    flexDirection: "row",
-    paddingTop: constants.lg,
-    paddingBottom: constants.lg,
-  },
-  tagName: {
-    color: constants.darkGray,
-    fontSize: constants.fontSmall,
-    paddingRight: constants.sm,
-    paddingLeft: constants.sm,
   },
   actions: {
     paddingTop: constants.lg,

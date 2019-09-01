@@ -2,21 +2,15 @@ import * as React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import constants from "../utils/constants";
 
-export interface QuestionViewProps {
-  questionText: string;
-  author: {
-    name: string;
-    avatarUri: string;
-  };
-  questionTags: Array<string>;
+export interface QuestionMinimalProps {
+  text: string;
 }
 
-const QuestionView: React.SFC<QuestionViewProps> = () => {
+const QuestionMinimal: React.SFC<QuestionMinimalProps> = props => {
+  const { text } = props;
   return (
     <View style={styles.questionView}>
-      <Text style={styles.questionText}>
-        How can I calculate the value of PI accurately?
-      </Text>
+      <Text style={styles.questionText}>{text}</Text>
     </View>
   );
 };
@@ -24,7 +18,7 @@ const QuestionView: React.SFC<QuestionViewProps> = () => {
 const styles = StyleSheet.create({
   questionView: {
     backgroundColor: constants.white,
-    color: constants.black,
+    color: constants.darkerGray,
   },
   questionText: {
     fontWeight: "600",
@@ -32,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default QuestionView;
+export default QuestionMinimal;

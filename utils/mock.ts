@@ -6,7 +6,12 @@ export const postMock = {
     username: "realCandy",
   },
   createdAt: new Date("2019-08-31T07:37:30Z"),
-  tags: ["react", "react native", "webdev", "javascript"],
+  tags: [
+    { name: "react", uri: "/topic/react" },
+    { name: "react native", uri: "/topic/react-native" },
+    { name: "webdev", uri: "/topic/webdev" },
+    { name: "javascript", uri: "/topic/javascript" },
+  ],
 };
 
 export const userMock = {
