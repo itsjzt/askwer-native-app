@@ -1,21 +1,27 @@
 import { createSwitchNavigator } from "react-navigation";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
-// import AppNavigator from "./AppNavigator";
 import QuestionSingle from "../pages/QuestionSingle";
 import Feeds from "../pages/Feeds";
 import { createStackNavigator } from "react-navigation-stack";
 
 const routes = {
-  // AppNavigator: AppNavigator,
   QuestionSingle: QuestionSingle,
   Feeds: Feeds,
   Login: Login,
   Signup: Signup,
 };
 
-const intialRoute = {
+const options = {
   initialRouteName: "QuestionSingle",
+  defaultNavigationOptions: {
+    headerStyle: {
+      display: "none",
+    },
+  },
 };
 
-export const Navigation = createStackNavigator(routes, intialRoute);
+// @ts-ignore
+// this is a ts error because string is not assinable to "none"|"flex"
+// this is why you can hate strict types
+export const Navigation = createStackNavigator(routes, options);

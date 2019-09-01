@@ -41,6 +41,8 @@ const AnswerView: React.SFC<AnswerViewProps> = props => {
 const styles = StyleSheet.create({
   answer: {
     padding: constants.lg,
+    borderBottomColor: constants.lighterGray,
+    borderBottomWidth: constants.xl,
   },
   actionText: {
     fontSize: constants.fontSmall,
