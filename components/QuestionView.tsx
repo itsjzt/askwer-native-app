@@ -3,7 +3,9 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import constants from "../utils/constants";
 import { formatDistanceToNow } from "date-fns";
 import QuestionMinimal from "./QuestionMinimal";
-import Tags, { TagsProps, Tag } from "./Tags";
+import Tags, { Tag } from "./Tags";
+import SecondaryButton from "./SecondaryButton";
+import TimeFromNow from "./TimeFromNow";
 
 export interface QuestionViewProps {
   heading: string;
@@ -26,23 +28,18 @@ const QuestionView: React.SFC<QuestionViewProps> = props => {
         <View style={styles.info}>
           <Text style={styles.usersName}>{author.name}</Text>
           <Text style={styles.mutedText}> added </Text>
-          <Text style={styles.postedTime}>
-            {formatDistanceToNow(createdAt)} ago
-          </Text>
+          <TimeFromNow time={createdAt} style={styles.postedTime} />
         </View>
         <View style={styles.actions}>
-          <TouchableOpacity style={styles.action} onPress={() => {}}>
+          <SecondaryButton onPress={() => {}}>
             <Text style={styles.actionText}>Follow</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.action} onPress={() => {}}>
+          </SecondaryButton>
+          <SecondaryButton onPress={() => {}}>
             <Text style={styles.actionText}>Report</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.action, styles.answer]}
-            onPress={() => {}}
-          >
+          </SecondaryButton>
+          <SecondaryButton style={styles.answer} onPress={() => {}}>
             <Text style={styles.answerText}>Answer</Text>
-          </TouchableOpacity>
+          </SecondaryButton>
         </View>
       </View>
     </View>
@@ -79,14 +76,6 @@ const styles = StyleSheet.create({
     paddingTop: constants.lg,
     paddingBottom: constants.lg,
     flexDirection: "row",
-  },
-  action: {
-    marginLeft: constants.md,
-    marginRight: constants.md,
-    alignSelf: "center",
-    borderRadius: constants.sm,
-    padding: constants.md,
-    backgroundColor: constants.lighterGray,
   },
   actionText: {
     color: constants.darkerGray,
