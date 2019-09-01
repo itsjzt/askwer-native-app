@@ -1,12 +1,19 @@
 import * as React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
+import { postMock, answerMock } from "../utils/mock";
+import AnswerView from "../components/AnswerView";
+import QuestionView from "../components/QuestionView";
 
 export interface QuestionSingleProps {}
 
 const QuestionSingle: React.SFC<QuestionSingleProps> = () => {
   return (
     <View style={styles.container}>
-      <Text>See componts for pre-made components</Text>
+      <QuestionView {...postMock} />
+      <FlatList
+        data={Array(10).fill(answerMock)}
+        renderItem={({ item }) => <AnswerView {...item} />}
+      />
     </View>
   );
 };
