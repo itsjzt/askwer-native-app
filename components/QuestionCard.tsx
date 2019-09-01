@@ -71,11 +71,10 @@ const styles = StyleSheet.create({
   cardBody: {
     padding: constants.lg,
   },
-  // @ts-ignore
   cardHeading: {
     color: constants.darkerGray,
     fontSize: constants.lg,
-    fontWeight: constants.bold,
+    fontWeight: "600",
   },
   postInfo: {
     display: "flex",
@@ -101,9 +100,8 @@ const styles = StyleSheet.create({
     color: constants.darkGray,
     fontSize: constants.lg - constants.sm,
   },
-  // @ts-ignore
   usersName: {
-    fontWeight: constants.bold,
+    fontWeight: "600",
   },
   postedTime: {},
   spacing: {

@@ -82,11 +82,10 @@ const styles = StyleSheet.create({
   textWrapper: {
     display: "flex",
   },
-  // @ts-ignore
   text: {
     fontSize: constants.lg,
     color: constants.darkerGray,
-    fontWeight: constants.bold,
+    fontWeight: "600",
   },
   userAvatar: {
     borderRadius: constants.xl,

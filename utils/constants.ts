@@ -3,6 +3,7 @@ export default {
   primaryColor: "#5A67D8",
   black: "#000",
   white: "#fff",
+  googleRed: "#ff4343",
   lighterGray: "#eee",
   lightGray: "#bbb",
   darkGray: "#777",

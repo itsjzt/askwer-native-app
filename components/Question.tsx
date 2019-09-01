@@ -29,9 +29,8 @@ const styles = StyleSheet.create({
     backgroundColor: constants.white,
     color: constants.black,
   },
-  // @ts-ignore
   questionText: {
-    fontWeight: constants.bold,
+    fontWeight: "600",
     fontSize: constants.lg + constants.sm,
   },
 });
