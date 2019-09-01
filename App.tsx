@@ -5,12 +5,12 @@ import { View, StyleSheet } from "react-native";
 
 export interface AppProps {}
 
-const Nav = createAppContainer(Navigation);
+const AppNavigation = createAppContainer(Navigation);
 
 const App: React.SFC<AppProps> = () => {
   return (
     <View style={styles.app}>
-      <Nav />
+      <AppNavigation />
     </View>
   );
 };
