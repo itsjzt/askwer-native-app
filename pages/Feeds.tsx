@@ -3,13 +3,14 @@ import { View, StyleSheet } from "react-native";
 import QuestionView from "../components/QuestionView";
 import { postMock, answerMock } from "../utils/mock";
 import AnswerView from "../components/AnswerView";
+import QuestionMinimal from "../components/QuestionMinimal";
 
 export interface FeedsProps {}
 
 const Feeds: React.SFC<FeedsProps> = () => {
   return (
     <View style={styles.container}>
-      <QuestionView {...postMock} />
+      <QuestionMinimal {...postMock} />
       <AnswerView {...answerMock} />
     </View>
   );

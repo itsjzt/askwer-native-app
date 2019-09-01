@@ -24,7 +24,7 @@ const QuestionView: React.SFC<QuestionViewProps> = props => {
     <View style={styles.question}>
       <View style={styles.wrapper}>
         <Tags tags={tags} />
-        <QuestionMinimal text={heading} />
+        <QuestionMinimal heading={heading} />
         <View style={styles.info}>
           <Text style={styles.usersName}>{author.name}</Text>
           <Text style={styles.mutedText}> added </Text>
