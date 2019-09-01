@@ -9,24 +9,30 @@ import {
 } from "react-native";
 
 export interface FieldProps {
-  field: string;
+  value: string;
   name: string;
   placeholder: string;
-  setField: (field: string) => void;
+  onChangeText: (field: string) => void;
   otherInputProps?: TextInputProps;
 }
 
 // Form Input Field
 const Field: React.SFC<FieldProps> = props => {
-  const { name, field, setField, placeholder, otherInputProps = {} } = props;
+  const {
+    name,
+    value,
+    onChangeText,
+    placeholder,
+    otherInputProps = {},
+  } = props;
 
   return (
     <View style={styles.inputWrapper}>
       <Text style={styles.label}>{name}</Text>
       <TextInput
-        value={field}
+        value={value}
         placeholder={placeholder}
-        onChangeText={setField}
+        onChangeText={onChangeText}
         style={styles.input}
         {...otherInputProps}
       />

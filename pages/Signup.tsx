@@ -1,18 +1,32 @@
 import * as React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { NavigationContainerProps } from "react-navigation";
+import AuthForm, { AuthFormState } from "../components/AuthForm";
 
-export interface SignupProps {}
+export interface SignupProps extends NavigationContainerProps {}
 
 export interface SignupState {}
 
 export default class Signup extends React.Component<SignupProps, SignupState> {
-  state = {};
+  submitHandler = (values: AuthFormState) => {
+    console.log(values);
+    const { navigate } = this.props.navigation;
+    navigate("Login");
+  };
 
-  public render() {
+  googleHandler = () => {
+    const { navigate } = this.props.navigation;
+    navigate("Login");
+  };
+
+  render() {
+    const { submitHandler, googleHandler } = this;
     return (
-      <View>
-        <Text>Signup Component</Text>
-      </View>
+      <AuthForm
+        googleHandler={googleHandler}
+        haveNameField={true}
+        submitHandler={submitHandler}
+        submitLabel="Sign up"
+      />
     );
   }
 }
