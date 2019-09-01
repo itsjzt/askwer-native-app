@@ -1,7 +1,6 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import constants from "../utils/constants";
-import { formatDistanceToNow } from "date-fns";
 import SecondaryButton from "./SecondaryButton";
 import TimeFromNow from "./TimeFromNow";
 
@@ -33,6 +32,17 @@ const AnswerView: React.SFC<AnswerViewProps> = props => {
         </SecondaryButton>
       </View>
       <Text>{answer}</Text>
+      <View style={styles.actions}>
+        <SecondaryButton onPress={() => {}}>
+          <Text style={styles.actionText}>Upvote</Text>
+        </SecondaryButton>
+        <SecondaryButton onPress={() => {}}>
+          <Text style={styles.actionText}>Downvote</Text>
+        </SecondaryButton>
+        <SecondaryButton onPress={() => {}}>
+          <Text style={styles.actionText}>Report</Text>
+        </SecondaryButton>
+      </View>
     </View>
   );
 };
@@ -63,6 +73,13 @@ const styles = StyleSheet.create({
   },
   followText: {
     fontSize: constants.fontSmall,
+  },
+  actionText: {
+    fontSize: constants.fontSmall,
+  },
+  actions: {
+    flexDirection: "row",
+    paddingTop: constants.lg,
   },
 });
 
