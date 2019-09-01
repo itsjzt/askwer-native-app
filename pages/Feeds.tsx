@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
-import PostCard from "../components/QuestionCard";
+import QuestionView from "../components/QuestionView";
 import { postMock } from "../utils/mock";
 
 export interface FeedsProps {}
@@ -8,7 +8,7 @@ export interface FeedsProps {}
 const Feeds: React.SFC<FeedsProps> = () => {
   return (
     <View style={styles.container}>
-      <PostCard {...postMock} />
+      <QuestionView {...postMock} />
     </View>
   );
 };
@@ -16,8 +16,6 @@ const Feeds: React.SFC<FeedsProps> = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });
 export default Feeds;

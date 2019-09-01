@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     color: constants.darkerGray,
     marginBottom: constants.md,
     textTransform: "uppercase",
-    fontSize: constants.lg - constants.sm - constants.xs,
+    fontSize: constants.fontSmallest,
     fontWeight: "600",
   },
   input: {

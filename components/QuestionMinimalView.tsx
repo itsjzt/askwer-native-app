@@ -12,14 +12,11 @@ export interface QuestionViewProps {
 }
 
 const QuestionView: React.SFC<QuestionViewProps> = () => {
-  const s = styles;
-
   return (
-    <View style={s.questionView}>
-      <Text style={s.questionText}>
+    <View style={styles.questionView}>
+      <Text style={styles.questionText}>
         How can I calculate the value of PI accurately?
       </Text>
-      <Button title="Follow" onPress={() => console.log("follow")} />
     </View>
   );
 };
@@ -31,7 +28,7 @@ const styles = StyleSheet.create({
   },
   questionText: {
     fontWeight: "600",
-    fontSize: constants.lg + constants.sm,
+    fontSize: constants.fontLarge,
   },
 });
 

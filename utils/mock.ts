@@ -1,14 +1,12 @@
 export const postMock = {
-  imageUri:
-    "https://res.cloudinary.com/practicaldev/image/fetch/s--EbaaYdSn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--KhPIJprz--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/lpv32arlyrevwvxa3iz7.jpg",
-  heading: "What's the FASTEST web framework? | Web Framework Comparisons",
+  heading:
+    "What's the best way to create react native apps expo or create react native app?",
   author: {
     name: "RealToughCandy",
-    avatarUri:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--47xAqPFN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/33233/531aa632-1b19-417c-b8ea-4ea9e570585e.jpg",
+    username: "realCandy",
   },
   createdAt: new Date("2019-08-31T07:37:30Z"),
-  tags: ["react", "vue", "webdev", "javascript"],
+  tags: ["react", "react native", "webdev", "javascript"],
 };
 
 export const userMock = {

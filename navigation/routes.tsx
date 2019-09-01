@@ -10,7 +10,7 @@ const routes = {
 };
 
 const intialRoute = {
-  initialRouteName: "Login",
+  initialRouteName: "Feeds",
 };
 
 export const Navigation = createSwitchNavigator(routes, intialRoute);
