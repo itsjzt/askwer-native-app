@@ -5,6 +5,7 @@ import QuestionSingle from "../pages/QuestionSingle";
 import Feeds from "../pages/Feeds";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { getTabBarIcon } from "../components/getTabBarIcon";
+import constants from "../utils/constants";
 
 const routes = {
   QuestionSingle: QuestionSingle,
@@ -20,8 +21,8 @@ const options = {
       getTabBarIcon(navigation, focused, tintColor),
   }),
   tabBarOptions: {
-    activeTintColor: "tomato",
-    inactiveTintColor: "gray",
+    activeTintColor: constants.primaryColor,
+    inactiveTintColor: constants.darkGray,
   },
 };
 
