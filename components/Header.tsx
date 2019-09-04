@@ -2,45 +2,25 @@ import * as React from "react";
 import { View, Text, StyleSheet, TextInput, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import constants from "../utils/constants";
+import SearchBar from "./SearchBar";
 
 export interface HeaderProps {
   user: {
-    avatarUri: string;
+    avatar: { uri: string };
   };
 }
 
 const Header: React.FC<HeaderProps> = props => {
-  const [seach, setSearch] = React.useState("");
-  const s = styles;
-  const { avatarUri } = props.user;
+  const { avatar } = props.user;
 
   return (
-    <View style={s.header}>
-      <View style={[s.headerItem, s.textWrapper]}>
-        <Text style={s.text}>Ask.er</Text>
-      </View>
-      <View style={[s.headerItem, s.searchWrapper]}>
-        <Ionicons name="md-search" size={24} color={constants.darkerGray} />
-        <TextInput
-          style={s.search}
-          value={seach}
-          placeholder="Search"
-          placeholderTextColor={constants.lightGray}
-          onChangeText={text => setSearch(text)}
-        />
-      </View>
-      <View style={[s.headerItem]}>
-        <Ionicons
-          name="md-notifications"
-          size={24}
-          color={constants.darkerGray}
-        />
-      </View>
-      <View style={[s.headerItem]}>
+    <View style={styles.header}>
+      <SearchBar />
+      <View style={styles.userAvatarWrapper}>
         <Image
-          style={s.userAvatar}
+          style={styles.userAvatar}
           source={{
-            uri: avatarUri,
+            uri: avatar.uri,
           }}
         />
       </View>
@@ -50,37 +30,15 @@ const Header: React.FC<HeaderProps> = props => {
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: constants.xl + constants.md,
+    padding: constants.md,
     borderBottomColor: constants.lighterGray,
     borderBottomWidth: 1,
-    paddingLeft: constants.lg,
-    paddingBottom: constants.md,
-    paddingRight: constants.lg,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
   },
-  headerItem: {
+  userAvatarWrapper: {
     paddingLeft: constants.md,
-    paddingRight: constants.md,
-  },
-  search: {
-    padding: constants.xs,
-    // there is icon on left
-    paddingLeft: constants.md,
-    flex: 1,
-    color: constants.darkerGray,
-  },
-  searchWrapper: {
-    display: "flex",
-    flex: 1,
-    alignItems: "center",
-    flexDirection: "row",
-    borderRadius: constants.sm,
-    backgroundColor: constants.lighterGray,
-  },
-  textWrapper: {
-    display: "flex",
   },
   text: {
     fontSize: constants.lg,
