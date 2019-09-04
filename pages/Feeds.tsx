@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     paddingTop: constants.md,
   },
   feedEach: {
-    padding: 16,
+    padding: constants.lg,
     backgroundColor: constants.white,
-    marginBottom: constants.lg,
+    marginBottom: constants.xl,
   },
 });
 export default Feeds;
