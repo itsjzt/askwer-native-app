@@ -1,4 +1,5 @@
 export const postMock = {
+  id: "question1",
   heading:
     "What's the best way to create react native apps expo or create react native app?",
   author: {
@@ -15,6 +16,7 @@ export const postMock = {
 };
 
 export const userMock = {
+  id: "user1",
   avatar: {
     uri:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--rq-5ur5l--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/41065/2dde0a31-7a8a-4089-ab15-ffdf8192e082.jpg",
@@ -24,6 +26,7 @@ export const userMock = {
 };
 
 export const answerMock = {
+  id: "answer1",
   author: userMock,
   createdAt: new Date("2019-08-31T07:37:30Z"),
   answer: `Lorem ipsum dolor sit amet consectetur adipiscing elit, gravida nisi curae volutpat turpis. Rutrum donec faucibus erat parturient taciti nisi dictum, morbi proin blandit mauris laoreet justo. Orci sem interdum neque enim ullamcorper primis dictum mollis facilisi, at donec netus euismod mus hendrerit convallis nam, aenean sodales porttitor facilisis himenaeos tortor mi nunc.

@@ -1,10 +1,11 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import constants from "../utils/constants";
-import SecondaryButton from "./SecondaryButton";
 import AnswerAuthor from "./AnswerAuthor";
+import AnswerActions from "./AnswerActions";
 
 export interface AnswerViewProps {
+  id: string;
   answer: string;
   createdAt: Date;
   author: {
@@ -17,23 +18,13 @@ export interface AnswerViewProps {
 }
 
 const AnswerView: React.SFC<AnswerViewProps> = props => {
-  const { answer, author, createdAt } = props;
+  const { id, answer, author, createdAt } = props;
 
   return (
     <View style={styles.answer}>
       <AnswerAuthor {...author} createdAt={createdAt} />
       <Text>{answer}</Text>
-      <View style={styles.actions}>
-        <SecondaryButton onPress={() => {}}>
-          <Text style={styles.actionText}>Upvote</Text>
-        </SecondaryButton>
-        <SecondaryButton onPress={() => {}}>
-          <Text style={styles.actionText}>Downvote</Text>
-        </SecondaryButton>
-        <SecondaryButton onPress={() => {}}>
-          <Text style={styles.actionText}>Report</Text>
-        </SecondaryButton>
-      </View>
+      <AnswerActions id={id} />
     </View>
   );
 };
@@ -43,13 +34,6 @@ const styles = StyleSheet.create({
     padding: constants.lg,
     borderBottomColor: constants.lighterGray,
     borderBottomWidth: constants.xl,
-  },
-  actionText: {
-    fontSize: constants.fontSmall,
-  },
-  actions: {
-    flexDirection: "row",
-    paddingTop: constants.lg,
   },
 });
 
