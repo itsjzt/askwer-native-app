@@ -6,16 +6,18 @@ import Feeds from "../pages/Feeds";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { getTabBarIcon } from "../components/getTabBarIcon";
 import constants from "../utils/constants";
+import AddQuestion from "../pages/AddQuestion";
 
 const routes = {
   QuestionSingle: QuestionSingle,
   Feeds: Feeds,
   Login: Login,
   Signup: Signup,
+  AddQuestion: AddQuestion,
 };
 
 const options = {
-  initialRouteName: "Feeds",
+  initialRouteName: "AddQuestion",
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, tintColor }) =>
       getTabBarIcon(navigation, focused, tintColor),
