@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
