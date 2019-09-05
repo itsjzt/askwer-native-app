@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     paddingBottom: constants.lg,
   },
   label: {
-    color: constants.darkerGray,
+    color: constants.darkGray,
     marginBottom: constants.md,
     textTransform: "uppercase",
     fontSize: constants.fontSmallest,
@@ -55,9 +55,8 @@ const styles = StyleSheet.create({
   input: {
     fontSize: constants.lg,
     padding: constants.md,
-    borderRadius: constants.md,
-    borderColor: constants.lighterGray,
-    borderWidth: 1,
+    borderRadius: constants.sm,
+    backgroundColor: constants.lightestGray,
     color: constants.darkerGray,
   },
 });

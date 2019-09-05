@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     borderRadius: constants.sm,
-    backgroundColor: constants.lighterGray,
+    backgroundColor: constants.lightestGray,
   },
 });
 
