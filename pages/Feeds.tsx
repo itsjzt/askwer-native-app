@@ -1,10 +1,8 @@
 import * as React from "react";
-import { View, StyleSheet, FlatList, ScrollView } from "react-native";
-import { postMock, answerMock, userMock } from "../utils/mock";
+import { View, StyleSheet, ScrollView } from "react-native";
+import { postMock, answerMock } from "../utils/mock";
 import QuestionMinimal from "../components/QuestionMinimal";
 import AnswerMinimal from "../components/AnswerMinimal";
-import SearchBar from "../components/SearchBar";
-import Header from "../components/Header";
 import AddMetaToPages from "../components/AddMetaToPages";
 import constants from "../utils/constants";
 import AnswerActions from "../components/AnswerActions";
