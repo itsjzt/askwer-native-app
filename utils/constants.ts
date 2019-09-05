@@ -5,6 +5,7 @@ export default {
   white: "#fff",
   googleRed: "#ff4343",
   lighterGray: "#eee",
+  lightestGray: "#f5f5f5",
   lightGray: "#bbb",
   darkGray: "#777",
   darkerGray: "#333",
