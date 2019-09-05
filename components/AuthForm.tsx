@@ -26,7 +26,7 @@ class AuthForm extends Component<AuthFormProps, AuthFormState> {
 
   componentDidUpdate(prevProps: AuthFormProps) {
     const { prefill } = this.props;
-    if (prefill !== prevProps.prefill) {
+    if (prefill && prefill !== prevProps.prefill) {
       this.setState(prefill);
     }
   }
