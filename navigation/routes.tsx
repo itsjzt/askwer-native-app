@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { getTabBarIcon } from "../components/getTabBarIcon";
 import constants from "../utils/constants";
 import AddQuestion from "../pages/AddQuestion";
+import AddAnswer from "../pages/AddAnswer";
 
 const routes = {
   QuestionSingle: QuestionSingle,
@@ -14,10 +15,11 @@ const routes = {
   Login: Login,
   Signup: Signup,
   AddQuestion: AddQuestion,
+  AddAnswer: AddAnswer,
 };
 
 const options = {
-  initialRouteName: "AddQuestion",
+  initialRouteName: "AddAnswer",
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, tintColor }) =>
       getTabBarIcon(navigation, focused, tintColor),

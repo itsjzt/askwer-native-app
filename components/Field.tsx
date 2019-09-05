@@ -6,6 +6,8 @@ import {
   TextInput,
   StyleSheet,
   TextInputProps,
+  StyleProp,
+  TextStyle,
 } from "react-native";
 
 export interface FieldProps {
@@ -13,6 +15,7 @@ export interface FieldProps {
   name: string;
   placeholder: string;
   onChangeText: (field: string) => void;
+  style?: StyleProp<TextStyle>;
   otherInputProps?: TextInputProps;
 }
 
@@ -23,6 +26,7 @@ const Field: React.SFC<FieldProps> = props => {
     value,
     onChangeText,
     placeholder,
+    style = {},
     otherInputProps = {},
   } = props;
 
@@ -33,7 +37,7 @@ const Field: React.SFC<FieldProps> = props => {
         value={value}
         placeholder={placeholder}
         onChangeText={onChangeText}
-        style={styles.input}
+        style={[styles.input, style]}
         {...otherInputProps}
       />
     </View>

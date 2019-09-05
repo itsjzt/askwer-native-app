@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavigationContainerProps } from "react-navigation";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button } from "react-native";
 import constants from "../utils/constants";
 import Field from "../components/Field";
 import AddMetaToPages from "../components/AddMetaToPages";
@@ -62,9 +62,14 @@ class AddQuestion extends Component<AddQuestionProps, AddQuestionState> {
             value={tags}
             onChangeText={onTagsChange}
           />
-          <Text style={styles.muted}>
+          <Text style={styles.tagsMsg}>
             Seperate tags by comman and don't include hashtag
           </Text>
+          <Button
+            color={constants.primaryColor}
+            title="Add Question"
+            onPress={() => {}}
+          />
         </View>
       </AddMetaToPages>
     );
@@ -76,9 +81,10 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: constants.lg,
   },
-  muted: {
+  tagsMsg: {
     color: constants.darkGray,
     fontSize: constants.fontSmall,
+    marginBottom: constants.xl,
   },
 });
 
