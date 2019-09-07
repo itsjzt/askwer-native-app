@@ -41,7 +41,6 @@ class AddQuestion extends Component<AddQuestionProps, AddQuestionState> {
           otherInputProps={{
             multiline: true,
             maxLength: 72,
-            autoFocus: true,
           }}
         />
         <Field
