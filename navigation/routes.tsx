@@ -10,10 +10,10 @@ import AddMetaToPages from "../components/AddMetaToPages";
 
 const routes = {
   QuestionSingle: RouteWrapper(QuestionSingle),
-  Feeds: RouteWrapper(Feeds),
+  Home: RouteWrapper(Feeds),
   Login: RouteWrapper(Login),
   Signup: RouteWrapper(Signup),
-  AddQuestion: RouteWrapper(AddQuestion),
+  Ask: RouteWrapper(AddQuestion),
   AddAnswer: RouteWrapper(AddAnswer),
 };
 

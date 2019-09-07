@@ -1,10 +1,10 @@
 import * as React from "react";
-import { NavigationContainerProps } from "react-navigation";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import constants from "../utils/constants";
+import { NavigationScreenProps } from "react-navigation";
 
-export interface TabBarProps extends NavigationContainerProps {}
+export interface TabBarProps extends NavigationScreenProps {}
 
 const TabBar: React.SFC<TabBarProps> = props => {
   const TabBarIcons = [
@@ -14,9 +14,8 @@ const TabBar: React.SFC<TabBarProps> = props => {
     "md-person",
   ];
   const TabBarText = ["Home", "Ask", "Notification", "Profile"];
-
-  // @ts-ignore
   const activeRoute = props.navigation.state.routeName;
+  const { navigate } = props.navigation;
 
   return (
     <View style={styles.tabBar}>
@@ -24,13 +23,20 @@ const TabBar: React.SFC<TabBarProps> = props => {
         .fill(null)
         .map((_, index) => {
           const currentIcon = TabBarIcons[index];
+          const currentRoute = TabBarText[index];
+          const changeRoute = () => navigate(TabBarText[index]);
+          const isCurrentTabActive = activeRoute === currentRoute;
+          const iconColor = isCurrentTabActive
+            ? constants.primaryColor
+            : constants.darkGray;
+
           return (
-            <TouchableOpacity style={styles.tabBarItem} key={index}>
-              <Ionicons
-                name={currentIcon}
-                size={24}
-                color={constants.darkGray}
-              />
+            <TouchableOpacity
+              onPress={changeRoute}
+              style={styles.tabBarItem}
+              key={index}
+            >
+              <Ionicons name={currentIcon} size={24} color={iconColor} />
               <Text style={styles.tabBarText}>{TabBarText[index]}</Text>
             </TouchableOpacity>
           );
