@@ -9,10 +9,13 @@ export interface AddMetaToPagesProps extends TabBarProps {
 
 const AddMetaToPages: React.SFC<AddMetaToPagesProps> = props => {
   const { children, ...rest } = props;
+  const { navigation } = rest;
+
+  const avatarOnPress = () => navigation.push("Profile");
 
   return (
     <>
-      <Header user={userMock} />
+      <Header user={userMock} avatarOnPress={avatarOnPress} />
       {children}
       <TabBar {...rest} />
     </>
