@@ -6,6 +6,7 @@ import { NavigationScreenProps } from "react-navigation";
 import { userMock } from "../utils/mock";
 import FeedMinimal from "./FeedMinimal";
 import { ScrollView } from "react-native-gesture-handler";
+import RenderIf from "../components/RenderIf";
 
 export interface ProfileProps extends NavigationScreenProps {}
 
@@ -44,9 +45,25 @@ const Profile: React.SFC<ProfileProps> = props => {
           </View>
         </View>
         <View style={styles.actions}>
-          <SecondaryButton onPress={goToEditProfile}>
-            <Text>Edit Profile</Text>
-          </SecondaryButton>
+          {/* if my profile */}
+          <RenderIf check={true}>
+            <SecondaryButton onPress={goToEditProfile}>
+              <Text>Edit Profile</Text>
+            </SecondaryButton>
+          </RenderIf>
+
+          {/* If Not follwing */}
+          <RenderIf check={true}>
+            <SecondaryButton onPress={goToEditProfile}>
+              <Text>Follow</Text>
+            </SecondaryButton>
+          </RenderIf>
+          {/* If follwing */}
+          <RenderIf check={true}>
+            <SecondaryButton onPress={goToEditProfile}>
+              <Text>Unfollow</Text>
+            </SecondaryButton>
+          </RenderIf>
         </View>
         <View style={styles.questionAsked}>
           {Array(10)

@@ -10,6 +10,7 @@ import AddMetaToPages from "../components/AddMetaToPages";
 import EditProfile from "../pages/EditProfile";
 import Profile from "../pages/Profile";
 import Settings from "../pages/Settings";
+import Notification from "../pages/Notification";
 
 const routes = {
   QuestionSingle: RouteWrapper(QuestionSingle),
@@ -21,6 +22,7 @@ const routes = {
   EditProfile: RouteWrapper(EditProfile),
   Settings: RouteWrapper(Settings),
   AddAnswer: RouteWrapper(AddAnswer),
+  Notification: RouteWrapper(Notification),
 };
 
 function RouteWrapper(Component) {

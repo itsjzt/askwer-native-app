@@ -1,6 +1,6 @@
 import * as React from "react";
 import { NavigationScreenProps } from "react-navigation";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Button } from "react-native";
 import { userMock } from "../utils/mock";
 import Field from "../components/Field";
 import constants from "../utils/constants";
@@ -37,6 +37,7 @@ const EditProfile: React.SFC<EditProfileProps> = () => {
         onChangeText={setBio}
         numberOfLines={constants.sm}
       />
+      <Button title="Save" color={constants.primaryColor} onPress={() => {}} />
     </View>
   );
 };
