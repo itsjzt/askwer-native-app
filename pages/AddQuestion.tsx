@@ -3,6 +3,7 @@ import { NavigationContainerProps } from "react-navigation";
 import { StyleSheet, View, Text, Button } from "react-native";
 import constants from "../utils/constants";
 import Field from "../components/Field";
+import TextField from "../components/TextField";
 
 export interface AddQuestionProps extends NavigationContainerProps {}
 
@@ -39,19 +40,14 @@ class AddQuestion extends Component<AddQuestionProps, AddQuestionState> {
           placeholder="What can I calculate value of PI?"
           name="Question"
           otherInputProps={{
-            multiline: true,
             maxLength: 72,
           }}
         />
-        <Field
+        <TextField
           name="Description"
           placeholder="How these supercomputers do find the value of PI "
           value={description}
           onChangeText={onDescriptionChange}
-          otherInputProps={{
-            multiline: true,
-            numberOfLines: 10,
-          }}
         />
         <Field
           name="Tags"

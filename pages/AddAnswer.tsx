@@ -4,8 +4,8 @@ import { NavigationContainerProps } from "react-navigation";
 import { View, StyleSheet, Button } from "react-native";
 import constants from "../utils/constants";
 import { postMock } from "../utils/mock";
-import Field from "../components/Field";
 import QuestionMinimal from "../components/QuestionMinimal";
+import TextField from "../components/TextField";
 
 export interface AddAnswerProps extends NavigationContainerProps {}
 
@@ -26,15 +26,11 @@ class AddAnswer extends Component<AddAnswerProps, AddAnswerState> {
     return (
       <View style={styles.container}>
         <QuestionMinimal {...postMock} />
-        <Field
+        <TextField
           value={answerText}
           onChangeText={onAnswerChange}
           placeholder=""
           name="Write Your Answer"
-          otherInputProps={{
-            multiline: true,
-            numberOfLines: 10,
-          }}
         />
         <Button
           title="Add Answer"

@@ -7,6 +7,9 @@ import AddQuestion from "../pages/AddQuestion";
 import AddAnswer from "../pages/AddAnswer";
 import { createStackNavigator } from "react-navigation-stack";
 import AddMetaToPages from "../components/AddMetaToPages";
+import EditProfile from "../pages/EditProfile";
+import Profile from "../pages/Profile";
+import Settings from "../pages/Settings";
 
 const routes = {
   QuestionSingle: RouteWrapper(QuestionSingle),
@@ -14,6 +17,9 @@ const routes = {
   Login: RouteWrapper(Login),
   Signup: RouteWrapper(Signup),
   Ask: RouteWrapper(AddQuestion),
+  Profile: RouteWrapper(Profile),
+  EditProfile: RouteWrapper(EditProfile),
+  Settings: RouteWrapper(Settings),
   AddAnswer: RouteWrapper(AddAnswer),
 };
 
@@ -28,7 +34,7 @@ function RouteWrapper(Component) {
 }
 
 const options = {
-  initialRouteName: "AddAnswer",
+  initialRouteName: "Profile",
   defaultNavigationOptions: {
     headerStyle: {
       display: "none",

@@ -11,9 +11,9 @@ const TabBar: React.SFC<TabBarProps> = props => {
     "md-paper",
     "md-create",
     "md-notifications",
-    "md-person",
+    "md-settings",
   ];
-  const TabBarText = ["Home", "Ask", "Notification", "Profile"];
+  const TabBarText = ["Home", "Ask", "Notification", "Settings"];
   const activeRoute = props.navigation.state.routeName;
   const { navigate } = props.navigation;
 

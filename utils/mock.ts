@@ -19,10 +19,12 @@ export const userMock = {
   id: "user1",
   avatar: {
     uri:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--rq-5ur5l--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/41065/2dde0a31-7a8a-4089-ab15-ffdf8192e082.jpg",
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--rq-5ur5l--/c_fill,f_auto,fl_progressive,h_500,q_auto,w_500/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/41065/2dde0a31-7a8a-4089-ab15-ffdf8192e082.jpg",
   },
   name: "Saurabh Sharma",
   username: "itsjzt",
+  email: "jztsaurabh@gmail.com",
+  bio: "lorem ipsum dolor amit ",
 };
 
 export const answerMock = {
